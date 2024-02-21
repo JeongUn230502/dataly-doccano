@@ -83,12 +83,12 @@ export default {
           link: 'labels',
           isVisible: this.isProjectAdmin 
         },
-        {
-          icon: mdiLabel,
-          text: 'Relations',
-          link: 'links',
-          isVisible: this.isProjectAdmin
-        },
+        // {
+        //   icon: mdiLabel,
+        //   text: 'Relations',
+        //   link: 'links',
+        //   isVisible: this.isProjectAdmin
+        // },
         {
           icon: mdiAccount,
           text: this.$t('members.members'),
