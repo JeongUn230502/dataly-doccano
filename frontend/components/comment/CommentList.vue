@@ -34,17 +34,11 @@
         filled
       />
     </template>
-    <!--
-    Tempolary removing due to the performance
     <template #[`item.action`]="{ item }">
-      <v-btn
-        small
-        color="primary text-capitalize"
-        @click="toLabeling(item)"
-      >
+      <v-btn small color="primary text-capitalize" @click="toLabeling(item)">
         {{ $t('dataset.annotate') }}
       </v-btn>
-    </template> -->
+    </template>
   </v-data-table>
 </template>
 
@@ -56,6 +50,7 @@ import type { PropType } from 'vue'
 import Vue from 'vue'
 import { DataOptions } from 'vuetify/types'
 import { CommentItem } from '~/domain/models/comment/comment'
+
 Vue.use(VueFilterDateFormat)
 Vue.use(VueFilterDateParse)
 
@@ -134,6 +129,12 @@ export default Vue.extend({
         payload.query.sortDesc = true
       }
       this.$emit('update:query', payload)
+    },
+    toLabeling(item: CommentItem) {
+      // const index = this.examples.findIndex((example: ExampleDTO) => example.id === item.example)
+      const index = this.items.indexOf(item)
+      const page = (index).toString()
+      this.$emit('click:labeling', { page, q: this.search })
     }
   }
 
@@ -146,3 +147,4 @@ export default Vue.extend({
   // }
 })
 </script>
+
