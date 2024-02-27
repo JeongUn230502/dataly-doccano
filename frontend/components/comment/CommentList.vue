@@ -133,7 +133,7 @@ export default Vue.extend({
     toLabeling(item: CommentItem) {
       // const index = this.examples.findIndex((example: ExampleDTO) => example.id === item.example)
       const index = this.items.indexOf(item)
-      const page = (index).toString()
+      const page = index.toString()
       this.$emit('click:labeling', { page, q: this.search })
     }
   }
@@ -147,4 +147,3 @@ export default Vue.extend({
   // }
 })
 </script>
-

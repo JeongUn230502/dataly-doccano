@@ -8,5 +8,4 @@ export default _.debounce(async ({ app, route }: NuxtAppOptions) => {
   // if (!member.isProjectAdmin) {
   //   return redirect(app.localePath('/projects/' + route.params.id))
   // }
-  
 }, 1000)

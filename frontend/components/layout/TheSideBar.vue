@@ -81,7 +81,7 @@ export default {
           icon: mdiLabel,
           text: this.$t('labels.labels'),
           link: 'labels',
-          isVisible: this.isProjectAdmin 
+          isVisible: this.isProjectAdmin
         },
         // {
         //   icon: mdiLabel,
